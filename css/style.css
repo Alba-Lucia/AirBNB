@@ -1,0 +1,322 @@
+.header{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0 20rem 0;
+}
+
+.header__busqueda{
+    margin-top: var(--separacion);
+    text-align: center;
+}
+@media (min-width: 1024px) {
+    .header__busqueda{
+        margin-top: 30rem;
+    }
+}
+
+.header__busqueda-label{
+    padding: 2rem;
+}
+
+.barra{
+    display: none;
+}
+@media (min-width: 1024px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .barra__navegacion{
+        display: flex;
+        gap: 4rem;
+    }
+}
+
+.barra__navegacion .barra__link{
+    color: var(--color-white);
+}
+
+.barra__nombre{
+    color: var(--color-white);
+    margin: 0;
+    font-weight: 900;
+    font-size: 4rem;
+    text-shadow: 0 0 0.2rem #000;
+
+}
+
+.barra__link, .barra__link--anfrition{
+    font-size: 2rem;
+    text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.726);
+    font-weight: 600;
+}
+
+.barra__link--anfrition{
+    font-size: 2.5rem;
+}
+
+.formulario{
+    margin: 5rem auto 2rem auto;
+    background-color: var(--color-white);
+    border-radius: 5rem;
+    box-shadow: 0px 3px 7px 0px var(--color-gris);
+    padding: 3rem 0;
+}
+@media (min-width: 1024px) {
+    .formulario{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100rem;
+        padding: 0;
+    }
+}
+
+.formulario__campo{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1024px) {
+    .formulario__campo:nth-child(1){
+        padding-left: 4rem;
+    }
+}
+.formulario__campo:hover{
+    background-color: #f0f0f0;
+    border-radius: 5rem;
+    box-shadow: 0px 6px 20px rgb(0 0 0 / 40%);
+}
+
+.formulario__label{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.formulario__input{
+    border: none;
+    width: 100%;
+    color: var(--color-gris);
+}
+
+.formulario .submit{
+    display: block;
+    height: 4rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2;
+}
+
+
+/* Destinos */
+
+.destinos__grid{
+    display: grid;
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .destinos__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .destinos__grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.destino{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.destino__imagen{
+    width: 14rem;
+    height: 14rem;
+
+}
+
+.destino__distancia, .destino__nombre{
+    margin: 0;
+}
+
+
+/* Lugares */
+
+.lugares__grid{
+    display: grid;
+    grid-template-columns: repeat(4, 25rem);
+    column-gap: 3rem;
+}
+@media (min-width: 768px) {
+    .lugares__grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media (min-width: 1024px) {
+    .lugares__grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.lugar{
+    scroll-snap-align: center;
+}
+
+.lugar__imagen{
+    border-radius: 1rem;
+}
+
+.lugar__nombre{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.anfitrion{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10rem;
+    padding: 5rem;
+    background-image: linear-gradient(to bottom, var(--color-black)0%, var(--color-black) 50%, transparent 50%), url(../img/anfitrion.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, 60rem;
+    background-position: center bottom;
+}
+@media (min-width: 480px){
+    .anfitrion{
+        background-size: 100%, 70rem;
+        background-position: center center 200%;
+    }
+}
+@media (min-width: 768px){
+    .anfitrion{
+        grid-template-rows: unset;
+        background-image: linear-gradient(to right, var(--color-black) 0%, var(--color-black) 45%, transparent 55%), url(../img/anfitrion.jpg);
+        background-size: 100%, auto;
+        background-position: center, 50% 30%;
+        padding: 15rem 5rem;
+    }
+}
+@media (min-width: 1024px){
+    .anfitrion{
+        background-position: center, right center;
+    }
+}
+
+.anfitrion__contenido{
+    display: flex;
+    flex-direction: column;
+}
+
+.anfitrion__texto, .anfitrion__heading{
+    color: var(--color-white);
+}
+@media (min-width: 768px) {
+    .anfitrion__texto, .anfitrion__heading{
+        width: 50%;
+    }
+}
+
+.anfitrion__enlace {
+    color: var(--color-black);
+    border-radius: 1rem;
+}
+@media (min-width: 768px){
+    .anfitrion__enlace {
+        width: 50%;
+    }
+}
+
+/* Experiencias */
+.experiencias__listado{
+    display: grid;
+    grid-template-columns: repeat(3, 25rem);
+    column-gap: 2rem;
+}  
+@media (min-width: 768px) {
+    .experiencias__listado{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }   
+}
+
+.experiencia__imagen{
+    border-radius: 1rem;
+}
+
+.experiencia__titulo{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.experiencia{
+    scroll-snap-align: center;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--color-grisClaro);
+    border-top: 1px solid var(--color-gris);
+    padding-top: var(--separacion);
+}
+
+.footer__grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 1024px) {
+    .footer__grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer__heading{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.footer__enlace{
+    display: block;
+    color: var(--color-gris);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer__barra{
+    border-top: 1px solid var(--color-gris);
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.footer__barranav{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .footer__barranav{
+        flex-direction: row;
+    }
+}
+
+.footer__enlace--barra{
+    color: var(--color-gris);
+}
+.footer__enlace--barra::before{
+    content: "-";
+    margin-right: .5rem;
+}

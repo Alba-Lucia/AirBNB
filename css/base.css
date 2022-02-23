@@ -1,0 +1,134 @@
+:root{
+    --color-primary: #e8505b;
+    --color-secundary: rgb(189, 30, 89);
+    --color-gris: #686868;
+    --color-grisClaro: #e1e1e1;
+    --color-black: #000;
+    --color-white: #fff;
+
+    --funtePrincipal: 'Lexend', sans-serif;    
+    --separacion: 5rem;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body {
+    font-family: var(--funtePrincipal);
+    font-size: 1.6rem;
+}
+
+p {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+@media (min-width: 768px){
+    p{
+        font-size: 2rem;
+    }
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .contenedor{
+        width: 95%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    line-height: 1
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-secundary);
+    text-align: center;
+    padding: 0 0 1rem 0;
+}
+@media (min-width: 768px){
+    h2 {
+        font-size: 3rem;
+        padding: 0 0 2rem 0;
+    }
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+@media (min-width: 768px){
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+ul {
+    padding:0;
+    list-style: none;
+    margin: 0;
+}
+
+.btn{
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    margin: 2rem 0;
+    display: inline ;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    border: 3rem;
+    border-radius: 5rem;
+}
+
+.seccion{
+    padding: 2rem 0;
+}
+@media (min-width: 768px){
+    .seccion{
+        padding: 5rem 2rem;
+    }
+}
+
+[class$="__heading"]{
+    margin: 2rem 0rem;
+}
+
+.scroll-horizontal{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
